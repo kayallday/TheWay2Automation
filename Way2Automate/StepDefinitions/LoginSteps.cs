@@ -23,35 +23,11 @@ namespace Way2AutomateTests.StepDefinitions
             Driver.Quit();
         }
 
-        [Given(@"I am on the HomePage")]
-        public void GivenIAmOnTheHomePage()
-        {
-            HomePage homepage = new HomePage(Driver);
-            homepage.VisitHomepage();
-        }
-
-        [Given(@"I have clicked the Member Login Button")]
-        public void GivenIHaveClickedTheMemberLoginButton()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"A new window is opened display the login page")]
-        public void ThenANewWindowIsOpenedDisplayTheLoginPage()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Given(@"I have clicked the Create an Account link")]
-        public void GivenIHaveClickedTheCreateAnAccountLink()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Given(@"I am on the Sign Up page")]
+        [Given(@"I am on the SignUp page")]
         public void GivenIAmOnTheSignUpPage()
         {
-            ScenarioContext.Current.Pending();
+            HomePage homepage = new HomePage(Driver);
+            homepage.VisitSignUpPage();
         }
 
         [Given(@"I have completed the form with '(.*)' and '(.*)' and '(.*)' and '(.*)'")]
