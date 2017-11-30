@@ -8,10 +8,8 @@ using NUnit.Framework;
 
 namespace Way2AutomateTests.PageObjects
 {
-    [TestFixture]
     class HomePage : BasePage
     {
-        [SetUp]
         protected HomePage(IWebDriver driver) : base(driver) { }
 
         internal void VisitBuySeleniumNowPage()
