@@ -5,7 +5,7 @@
 
 @Login
 Scenario Outline: SignUp
-	Given I am on the Sign Up page  
+	Given I am on the SignUp page  
 	And I have completed the form with <fullname> and <email> and <password> and <passwordConfirmation>
 	And I have checked the I agree to the Terms of Use & Privacy Policy box
 	When I have clicked the Sign Up button

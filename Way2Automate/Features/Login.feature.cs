@@ -80,7 +80,7 @@ namespace Way2Automate.Features
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I am on the Sign Up page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the SignUp page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.And(string.Format("I have completed the form with {0} and {1} and {2} and {3}", fullname, email, password, passwordConfirmation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
