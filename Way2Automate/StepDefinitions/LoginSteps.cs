@@ -30,7 +30,7 @@ namespace Way2AutomateTests.StepDefinitions
             homepage.VisitSignUpPage();
         }
 
-        [Given(@"I have completed the form with '(.*)' and '(.*)' and '(.*)' and '(.*)'")]
+        [Given(@"I have completed the form with (.*) and (.*) and (.*) and (.*)")]
         public void GivenIHaveCompletedTheFormWithAndAndAnd(string p0, string p1, string p2, string p3)
         {
             SignUpPage signUpPage = new SignUpPage(Driver);
