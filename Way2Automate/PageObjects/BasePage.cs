@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 
 namespace Way2AutomateTests.PageObjects
 {
-    class BasePage
+    public class BasePage
     {
         protected const int WAIT_SECONDS = 20;
 

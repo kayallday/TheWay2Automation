@@ -23,13 +23,14 @@ namespace Way2AutomateTests.PageObjects
             By fullNameInputBoxId = By.Id("user_name");
             WaitUntilClickable(fullNameInputBoxId, WAIT_SECONDS);
             Click(fullNameInputBoxId);
+            
         } 
         internal void SelectEmailAddressInputBox()
         {
             By emailAddressInputBoxId = By.Id("user_email");
             WaitUntilClickable(emailAddressInputBoxId, WAIT_SECONDS);
             Click(emailAddressInputBoxId);
-        } 
+        }
 
         internal void SelectPasswordInputBox()
         {
@@ -45,6 +46,14 @@ namespace Way2AutomateTests.PageObjects
             Click(confirmPasswordInputBoxId);
         }
 
+        internal void CompleteSignUpForm()
+        {
+            Type("Automated Tester", Find(fullName));
+            Type("automatedtestuseremail@gmail.com", Find(emailAdress));
+            Type("AutomateEverything2319", Find(passWord));
+            Type("AutomateEverything2319", Find(confirmPassword));
+        }
+
         internal void CheckAgreedToTermsBox()
         {
             By checkAgreedToTermsBoxId = By.Id("user_agreed_to_terms");
@@ -58,5 +67,11 @@ namespace Way2AutomateTests.PageObjects
             WaitUntilClickable(signUpButtonClass, WAIT_SECONDS);
             Click(signUpButtonClass);
         }
+
+        internal void ViewCourseDirectory()
+        {
+            By checkSignedInDirectoryClass = By.ClassName("signed-in-directory");
+            WaitUntilDisplayed(checkSignedInDirectoryClass, WAIT_SECONDS);
+        }
     }
-}
+} 

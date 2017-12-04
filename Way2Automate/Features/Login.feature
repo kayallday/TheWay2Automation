@@ -9,7 +9,7 @@ Scenario Outline: SignUp
 	And I have completed the form with <fullname> and <email> and <password> and <passwordConfirmation>
 	And I have checked the I agree to the Terms of Use & Privacy Policy box
 	When I have clicked the Sign Up button
-	Then I will be logged in as <fullname>
+	Then I can see the course directory
 		Examples:
 		| fullname         | email                            | password               | passwordConfirmation   |
 		| Automated Tester | automatedtestuseremail@gmail.com | AutomateEverything2319 | AutomateEverything2319 | 

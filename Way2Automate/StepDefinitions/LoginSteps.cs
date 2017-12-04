@@ -34,25 +34,28 @@ namespace Way2AutomateTests.StepDefinitions
         public void GivenIHaveCompletedTheFormWithAndAndAnd(string p0, string p1, string p2, string p3)
         {
             SignUpPage signUpPage = new SignUpPage(Driver);
-            signUpPage.CompleteSignUpForm("Automated Tester", "automatedtestuseremail@gmail.com", "AutomateEverything2319", "AutomateEverything2319");
+            signUpPage.CompleteSignUpForm();
         }
 
         [Given(@"I have checked the I agree to the Terms of Use & Privacy Policy box")]
         public void GivenIHaveCheckedTheIAgreeToTheTermsOfUsePrivacyPolicyBox()
         {
-            ScenarioContext.Current.Pending();
+            SignUpPage signUpPage = new SignUpPage(Driver);
+            signUpPage.CheckAgreedToTermsBox();
         }
 
         [When(@"I have clicked the Sign Up button")]
         public void WhenIHaveClickedTheSignUpButton()
         {
-            ScenarioContext.Current.Pending();
+            SignUpPage signUpPage = new SignUpPage(Driver);
+            signUpPage.ClickSignUpButton();
         }
 
-        [Then(@"I will be logged in as '(.*)'")]
-        public void ThenIWillBeLoggedInAs(string p0)
+        [Then(@"I can see the course directory")]
+        public void ThenICanSeeTheCourseDirectory()
         {
-            ScenarioContext.Current.Pending();
+            SignUpPage signUpPage = new SignUpPage(Driver);
+            signUpPage.ViewCourseDirectory();
         }
 
     }

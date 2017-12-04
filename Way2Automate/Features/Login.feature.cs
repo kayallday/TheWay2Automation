@@ -88,7 +88,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
  testRunner.When("I have clicked the Sign Up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.Then(string.Format("I will be logged in as {0}", fullname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I can see the course directory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
