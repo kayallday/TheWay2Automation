@@ -9,6 +9,13 @@ namespace Way2AutomateTests.PageObjects
 {
     class SignUpPage : BasePage
     {
+        By fullName = By.Id("user_name");
+        By emailAdress = By.Id("user_email");
+        By passWord = By.Id("user_password");
+        By confirmPassword = By.Id("user_password_confirmation");
+        By agreeToTerms = By.Id("user_agreed_to_terms");
+        By signUp = By.ClassName("signup-button");
+
         public SignUpPage(IWebDriver driver) : base(driver) { }
 
         internal void SelectFullNameInputBox()
@@ -29,7 +36,7 @@ namespace Way2AutomateTests.PageObjects
             By passwordInputBoxId = By.Id("user_password");
             WaitUntilClickable(passwordInputBoxId , WAIT_SECONDS);
             Click(passwordInputBoxId);
-        } 
+        }
 
         internal void SelectConfirmPasswordInputBox()
         {
@@ -51,6 +58,5 @@ namespace Way2AutomateTests.PageObjects
             WaitUntilClickable(signUpButtonClass, WAIT_SECONDS);
             Click(signUpButtonClass);
         }
-
     }
 }

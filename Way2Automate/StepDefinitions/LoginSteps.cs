@@ -33,7 +33,8 @@ namespace Way2AutomateTests.StepDefinitions
         [Given(@"I have completed the form with '(.*)' and '(.*)' and '(.*)' and '(.*)'")]
         public void GivenIHaveCompletedTheFormWithAndAndAnd(string p0, string p1, string p2, string p3)
         {
-            ScenarioContext.Current.Pending();
+            SignUpPage signUpPage = new SignUpPage(Driver);
+            signUpPage.CompleteSignUpForm("Automated Tester", "automatedtestuseremail@gmail.com", "AutomateEverything2319", "AutomateEverything2319");
         }
 
         [Given(@"I have checked the I agree to the Terms of Use & Privacy Policy box")]
