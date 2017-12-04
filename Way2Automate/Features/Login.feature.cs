@@ -65,10 +65,10 @@ namespace Way2Automate.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("SignUp")]
+        [NUnit.Framework.DescriptionAttribute("Login")]
         [NUnit.Framework.CategoryAttribute("Login")]
-        [NUnit.Framework.TestCaseAttribute("Automated Tester", "automatedtestuseremail@gmail.com", "AutomateEverything2319", "AutomateEverything2319", null)]
-        public virtual void SignUp(string fullname, string email, string password, string passwordConfirmation, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("automatedtestuseremail@gmail.com", "AutomateEverything2319", null)]
+        public virtual void Login(string email, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Login"};
@@ -76,18 +76,16 @@ namespace Way2Automate.Features
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SignUp", @__tags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", @__tags);
+#line 18
 this.ScenarioSetup(scenarioInfo);
-#line 8
- testRunner.Given("I am on the SignUp page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And(string.Format("I have completed the form with {0} and {1} and {2} and {3}", fullname, email, password, passwordConfirmation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.And("I have checked the I agree to the Terms of Use & Privacy Policy box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
- testRunner.When("I have clicked the Sign Up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
+#line 19
+ testRunner.Given("I am on the Login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 20
+ testRunner.And(string.Format("I have completed the form with \'{0}\' and \'{1}\'", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+ testRunner.When("I have clicked the LogIn button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
  testRunner.Then("I can see the course directory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

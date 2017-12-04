@@ -23,39 +23,68 @@ namespace Way2AutomateTests.StepDefinitions
             Driver.Quit();
         }
 
-        [Given(@"I am on the SignUp page")]
-        public void GivenIAmOnTheSignUpPage()
+        //[Given(@"I am on the SignUp page")]
+        //public void GivenIAmOnTheSignUpPage()
+        //{
+        //    HomePage homepage = new HomePage(Driver);
+        //    homepage.VisitSignUpPage();
+        //}
+
+        //[Given(@"I have completed the form with (.*) and (.*) and (.*) and (.*)")]
+        //public void GivenIHaveCompletedTheFormWithAndAndAnd(string p0, string p1, string p2, string p3)
+        //{
+        //    SignUpPage signUpPage = new SignUpPage(Driver);
+        //    signUpPage.CompleteSignUpForm();
+        //}
+
+        //[Given(@"I have checked the I agree to the Terms of Use & Privacy Policy box")]
+        //public void GivenIHaveCheckedTheIAgreeToTheTermsOfUsePrivacyPolicyBox()
+        //{
+        //    SignUpPage signUpPage = new SignUpPage(Driver);
+        //    signUpPage.CheckAgreedToTermsBox();
+        //}
+
+        //[When(@"I have clicked the Sign Up button")]
+        //public void WhenIHaveClickedTheSignUpButton()
+        //{
+        //    SignUpPage signUpPage = new SignUpPage(Driver);
+        //    signUpPage.ClickSignUpButton();
+        //}
+
+        //[Then(@"I can see the course directory")]
+        //public void ThenICanSeeTheCourseDirectory()
+        //{
+        //    SignUpPage signUpPage = new SignUpPage(Driver);
+        //    signUpPage.ViewCourseDirectory();
+        //}
+
+        [Given(@"I am on the Login page")]
+        public void GivenIAmOnTheLoginPage()
         {
-            HomePage homepage = new HomePage(Driver);
-            homepage.VisitSignUpPage();
+            HomePage homePage = new HomePage(Driver);
+            homePage.VisitLoginPage();
         }
 
-        [Given(@"I have completed the form with (.*) and (.*) and (.*) and (.*)")]
-        public void GivenIHaveCompletedTheFormWithAndAndAnd(string p0, string p1, string p2, string p3)
+        [Given(@"I have completed the form with (.*) and (.*)")]
+        public void GivenIHaveCompletedTheFormWithAnd(string p0, string p1)
         {
-            SignUpPage signUpPage = new SignUpPage(Driver);
-            signUpPage.CompleteSignUpForm();
+            LoginPage loginPage = new LoginPage(Driver);
+            loginPage.CompleteLoginForm();
         }
 
-        [Given(@"I have checked the I agree to the Terms of Use & Privacy Policy box")]
-        public void GivenIHaveCheckedTheIAgreeToTheTermsOfUsePrivacyPolicyBox()
+        [When(@"I have clicked the LogIn button")]
+        public void WhenIHaveClickedTheLogInButton()
         {
-            SignUpPage signUpPage = new SignUpPage(Driver);
-            signUpPage.CheckAgreedToTermsBox();
+            LoginPage loginPage = new LoginPage(Driver);
+            loginPage.ClickLogInButton();
         }
 
-        [When(@"I have clicked the Sign Up button")]
-        public void WhenIHaveClickedTheSignUpButton()
-        {
-            SignUpPage signUpPage = new SignUpPage(Driver);
-            signUpPage.ClickSignUpButton();
-        }
 
         [Then(@"I can see the course directory")]
         public void ThenICanSeeTheCourseDirectory()
         {
-            SignUpPage signUpPage = new SignUpPage(Driver);
-            signUpPage.ViewCourseDirectory();
+            LoginPage loginPage = new LoginPage(Driver);
+            loginPage.ViewCourseDirectory();
         }
 
     }
